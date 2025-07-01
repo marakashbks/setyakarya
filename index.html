@@ -55,14 +55,30 @@
         }
         
         nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.05); /* Slightly transparent */
-            backdrop-filter: blur(10px); /* Blur effect */
+            position: fixed; /* Ini yang membuat header tetap */
+            top: 0; /* Menempatkan header di bagian paling atas */
+            left: 0; /* Menempatkan header di bagian paling kiri */
+            width: 100%; /* Memastikan header membentang selebar layar */
+            background-color: rgba(255, 255, 255, 0.05); /* Sedikit transparan */
+            backdrop-filter: blur(10px); /* Efek blur */
             box-shadow: var(--shadow);
-            z-index: 1000;
+            z-index: 1000; /* Memastikan header berada di atas elemen lain */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        nav2 {
+            position: fixed; /* Ini yang membuat header tetap */
+            top: 0; /* Menempatkan header di bagian paling atas */
+            left: 0; /* Menempatkan header di bagian paling kiri */
+            width: 100%; /* Memastikan header membentang selebar layar */
+            background-color: rgba(255, 255, 255, 0.05); /* Sedikit transparan */
+            backdrop-filter: blur(10px); /* Efek blur */
+            box-shadow: var(--shadow);
+            z-index: 1000; /* Memastikan header berada di atas elemen lain */
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -580,8 +596,19 @@
         /* --- Responsive Design --- */
         @media (max-width: 768px) {
             nav {
-                flex-direction: column;
-                padding: 1rem;
+                position: fixed; /* Ini yang membuat header tetap */
+                top: 0; /* Menempatkan header di bagian paling atas */
+                left: 0; /* Menempatkan header di bagian paling kiri */
+                width: 100%; /* Memastikan header membentang selebar layar */
+                background-color: rgba(255, 255, 255, 0.05); /* Sedikit transparan */
+                backdrop-filter: blur(10px); /* Efek blur */
+                box-shadow: var(--shadow);
+                z-index: 1000; /* Memastikan header berada di atas elemen lain */
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem 5%;
+                border-bottom: 1px solid var(--border-color);
             }
             
             nav ul {
@@ -624,7 +651,7 @@
     <div class="particles" id="particles"></div>
 
     <nav>
-        <div class="logo">Wisata Rakyat<span> Danau Marakash</div>
+        <div class="logo">Wisata<span> Danau Marakash</div>
         <ul>
             <li><a href="#home">Beranda</a></li>
             <li><a href="#features">Fasilitas</a></li>
