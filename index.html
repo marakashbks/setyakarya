@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wisata Rakyat Danau Marakash</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --primary: #7b2cbf;
+      --secondary: #4cc9f0;
+      --accent: #f72585;
+      --dark: #1e1a3a;
+      --light: #0f0c29;
+      --card-bg: rgba(255, 255, 255, 0.1);
+      --text-color: white;
+      --text-light: rgba(255, 255, 255, 0.7);
+      --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      --border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, var(--light), var(--dark), #302b63);
+      color: var(--text-color);
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: var(--shadow);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      background: linear-gradient(45deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin-left: 1.5rem;
+    }
+
+    nav ul li a {
+      color: var(--text-light);
+      text-decoration: none;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: var(--text-color);
+    }
+
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: var(--accent);
+      transition: width 0.3s ease;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    header {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      background-color: rgba(15, 12, 41, 0.8);
+      backdrop-filter: blur(10px);
+      padding: 2rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      background: linear-gradient(45deg, white, var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 1rem;
+      color: var(--text-light);
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(45deg, var(--primary), var(--accent));
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    section {
+      padding: 5rem 10%;
+    }
+
+    section#features {
+      margin-top: 250px;
+    }
+
+    .feature-card {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 1rem;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .feature-card h3 {
+      color: var(--secondary);
+      margin-top: 1rem;
+    }
+
+    .feature-card p {
+      color: var(--text-light);
+    }
+
+    .section-title h2 {
+      font-size: 2rem;
+      text-align: center;
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 2rem;
+    }
+
+    footer {
+      text-align: center;
+      background: var(--dark);
+      color: white;
+      padding: 2rem;
+      border-top: 1px solid var(--border-color);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Wisata Rakyat<span> Marakash</span></div>
+    <ul>
+      <li><a href="#home">Beranda</a></li>
+      <li><a href="#features">Fasilitas</a></li>
+      <li><a href="#gallery">Galeri</a></li>
+      <li><a href="#testimonials">Testimoni</a></li>
+      <li><a href="#contact">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <section id="features">
+    <div class="hero">
+      <h1>Wisata Murah yang Berkualitas</h1>
+      <p>Tempat berkualitas untuk rekreasi keluarga dengan area bermain anak yang aman, zona UMKM kreatif, area parkir luas, dan lingkungan asri dengan pepohonan rindang.</p>
+      <a href="#features" class="btn">Jelajahi Fasilitas</a>
+    </div>    
+    <div class="section-title">
+      <h2>Fasilitas Unggulan</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="feature-card">
+        <h3>Taman Bermain Anak</h3>
+        <p>Area bermain yang aman dan edukatif untuk anak-anak dengan berbagai wahana menarik dan permainan interaktif.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Zona UMKM</h3>
+        <p>Area khusus untuk Usaha Mikro Kecil Menengah dengan berbagai produk kreatif dan kuliner khas lokal.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Area Parkir Luas</h3>
+        <p>Parkir yang nyaman dan aman dengan kapasitas besar untuk kendaraan roda dua dan empat serta area khusus difabel.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="section-title">
+      <h2>Galeri Kami</h2>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <img src="https://travelspromo.com/wp-content/uploads/2021/09/Playground-beralaskan-rumput-sintetis-achmad-W.jpg" class="rounded-lg shadow-lg">
+      <img src="https://salsawisata.com/wp-content/uploads/2022/12/rainbow-lake-danau-marakas-bekasi.jpg" class="rounded-lg shadow-lg">
+      <img src="https://picture.rumah123.com/r123-images/360x401-inside/customer/2136989/6ea2a55bea827509d0e30f571ef08f8d.jpg" class="rounded-lg shadow-lg">
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="section-title">
+      <h2>Testimoni Pengunjung</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="feature-card">
+        <p>"Taman bermainnya sangat aman dan nyaman untuk anak-anak. Fasilitasnya lengkap dan bersih."</p>
+        <h3>- Sarah Wijaya</h3>
+      </div>
+      <div class="feature-card">
+        <p>"UMKM-nya sangat mendukung usaha kecil seperti saya. Pengunjungnya ramai dan antusias."</p>
+        <h3>- Budi Santoso</h3>
+      </div>
+      <div class="feature-card">
+        <p>"Parkirnya luas dan rapi, jalan kaki juga nyaman karena banyak pohon rindang."</p>
+        <h3>- Dewi Rahayu</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-title">
+      <h2>Hubungi Kami</h2>
+    </div>
+    <form class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-white bg-opacity-10 p-6 rounded-lg shadow-lg">
+      <input type="text" placeholder="Nama Anda" class="p-2 rounded bg-white bg-opacity-20 text-white placeholder-white focus:outline-none">
+      <input type="email" placeholder="Email" class="p-2 rounded bg-white bg-opacity-20 text-white placeholder-white focus:outline-none">
+      <textarea placeholder="Pesan" rows="4" class="md:col-span-2 p-2 rounded bg-white bg-opacity-20 text-white placeholder-white focus:outline-none"></textarea>
+      <button type="submit" class="btn md:col-span-2">Kirim Pesan</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Wisata Rakyat Danau Marakash. Semua hak dilindungi.</p>
+    <div class="mt-2">
+      <a href="https://wa.me/6281499332296?text=Halo%20Admin,%20saya%20ingin%20lapor%20pembayaran" class="text-secondary hover:text-accent">Lapor ke Admin via WhatsApp</a>
+    </div>
+  </footer>
+
+</body>
+</html>
